@@ -20,7 +20,7 @@ In the extention settings for Vertical Tabs set the custom stylesheet to the fol
   margin-left: 14px;
   margin-right: 4px;
   padding: 2px;
-  padding-left: 12px;
+  padding-left: 6px;
   border: 1px solid var(--input-border);
   border-radius: var(--button-border-radius);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
