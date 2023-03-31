@@ -1,41 +1,121 @@
 
+#context-pocket, #context-inspect-a11y, #context-take-screenshot, #context-sep-screenshots {
+  display: none;
+}
+
+toolbarbutton#alltabs-button.toolbarbutton-1.chromeclass-toolbar-additional.tabs-alltabs-button {
+  display: none;
+}
+
+.findbar-closebutton {
+  opacity: 0.6;
+}
+
+.findbar-closebutton:hover {
+  opacity: 1.0;
+}
+
+/* URL bar settings */
+
+#urlbar, .searchbar-textbox {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove padding on urlbar results */
+.urlbarView-row {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+/* Remove padding on urlbar (icons on the right break without this) */
+#urlbar-input-container {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+/* Reduce "breakout" navbar height */
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+  height: calc(var(--urlbar-toolbar-height) - 4px) !important;
+}
+
+/* Fix breakout positioning being too high after we decreased the height */
+#urlbar[breakout][breakout-extend] {
+  top: 2px !important;
+}
+
+/* Remove padding on search one offs div */
+.search-one-offs {
+  padding-block: 0px !important;
+}
+
+/* Fix padding left of the search one-off icons */
+.search-panel-one-offs {
+  padding-left: 7px !important;
+}
+
+/* Remove margins around the search one-off icons */
+.searchbar-engine-one-off-item {
+  margin: 0px !important;
+}
+
+/* END URL bar settings */
 
 .titlebar-button {
   height: 27px !important;
 }
-#nav-bar {
+
+/*Use if auto hide nav bar is off*/
+/*#nav-bar {
   margin-top: -37px;
   padding-bottom: 5px;
   margin-right: 140px;
   box-shadow: none !important;
-}
+}*/
 
 /*Auto hide nav bar*/
-#nav-bar:not([customizing="true"]):not([inFullscreen]) {
-  min-height: 1px !important;
+#nav-bar:not([customizing="true"]) {
+  min-height: 0px !important;
   max-height: 0px !important;
   margin-top: -37px !important;
   margin-right: 140px;
   padding-bottom: 5px;
-  margin-bottom: -1px !important;
+  margin-bottom: -9px !important;
   transition: all 50ms linear 0s !important;
   z-index: -5 !important;
+  box-shadow: none !important;
 }
 
-#navigator-toolbox:hover:not([inFullscreen]) :-moz-any(#nav-bar),
+#navigator-toolbox {
+  opacity: 0.0;
+  transition: all 50ms linear 0s !important;
+}
+
+#navigator-toolbox:hover {
+  transition: all 50ms linear 0s !important;
+  opacity: 1.0;
+}
+
+#navigator-toolbox:hover :-moz-any(#nav-bar),
 #navigator-toolbox:focus-within :-moz-any(#nav-bar) {
   min-height: 32px !important;
-  max-height: 32px !important;
+  max-height: 36px !important;
   margin-top: -37px !important;
-  margin-bottom: 5px !important;
+  margin-right: 135px;
+  padding-bottom: 2px;
+  padding-top: 3px;
+  margin-bottom: -9px !important;
   transition: all 50ms linear 0s !important;
   z-index: 5 !important;
+  box-shadow: none !important;
 }
 
 /* Needed for for FF 75 megabar */
 #urlbar {
   --urlbar-toolbar-height: 32px !important;
 }
+
+/* END auto hide nav bar*/
 
 [uidensity="compact"]:root .titlebar-button {
   height: 32px !important;
@@ -53,6 +133,8 @@
 .titlebar-color {
   background-color: var(--toolbar-bgcolor);
 }
+
+/* Sidebar settings */
 
 /*
 From https://github.com/mgastonportillo/gale-for-ff
@@ -93,7 +175,7 @@ See the above repository for updates as well as full license text. */
 /* The border controlling sidebar width will be removed so you'll need to modify these values to change width */
 
 #sidebar-box {
-  --uc-sidebar-width: 33px;
+  --uc-sidebar-width: 43px;
   --uc-sidebar-hover-width: 233px;
   --uc-autohide-sidebar-delay: 250ms; /* Wait 0.25s before hiding sidebar */
   position: relative;
@@ -123,11 +205,6 @@ See the above repository for updates as well as full license text. */
 
 #sidebar-splitter {
   display: none;
-}
-
-#sidebar-header {
-  overflow: hidden;
-  color: var(--chrome-color, inherit) !important;
 }
 
 #sidebar {
@@ -175,3 +252,5 @@ See the above repository for updates as well as full license text. */
   margin-inline: 20px !important;
   border-left-style: solid !important;
 }
+
+/* END Sidebar settings */

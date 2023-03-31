@@ -1,11 +1,11 @@
 /*********************************************** Dark_mode_pdf **************************************************/
-/* Add "?n" to end of URL to make pdf light */
+/* Add "?n" or "?d" to end of URL to make pdf light */
 
 @-moz-document regexp(".+\.pdf$"){
     .pdfViewer .page{ background: #38383D !important }
     .loadingIcon+.canvasWrapper{ visibility: hidden }
 }
-@-moz-document regexp("^(?!.*\\.pdf\\?n).*") {
+@-moz-document regexp("^(?!.*\\.pdf\\?(n|d)).*") {
     #sidebarContainer > #sidebarContent > #thumbnailView {
         --sidebaritem-bg-color: #38383D;
     }
