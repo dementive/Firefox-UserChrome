@@ -8,7 +8,7 @@ In the extention settings for Vertical Tabs set the custom stylesheet to the fol
 #newtab-icon {
   background-image: url("img/new.svg");
   background-repeat: no-repeat;
-  padding-left: 26px;
+  padding-left: 24px;
 }
 
 #filterbox-input {
@@ -28,7 +28,8 @@ In the extention settings for Vertical Tabs set the custom stylesheet to the fol
   cursor: text;
   border-radius: 4px;
 }
-#filterbox-icon {
+#filterbox-icon,
+#settings-icon {
   display: none;
 }
 ```

@@ -1,5 +1,8 @@
 
-#context-pocket, #context-inspect-a11y, #context-take-screenshot, #context-sep-screenshots {
+#context-pocket,
+#context-inspect-a11y,
+#context-take-screenshot,
+#context-sep-screenshots {
   display: none;
 }
 
@@ -46,7 +49,7 @@ toolbarbutton#alltabs-button.toolbarbutton-1.chromeclass-toolbar-additional.tabs
 
 /* Remove padding on search one offs div */
 .search-one-offs {
-  padding-block: 0px !important;
+  padding-block: 1px !important;
 }
 
 /* Fix padding left of the search one-off icons */
@@ -56,7 +59,7 @@ toolbarbutton#alltabs-button.toolbarbutton-1.chromeclass-toolbar-additional.tabs
 
 /* Remove margins around the search one-off icons */
 .searchbar-engine-one-off-item {
-  margin: 0px !important;
+  margin: 1px !important;
 }
 
 /* END URL bar settings */
@@ -75,8 +78,8 @@ toolbarbutton#alltabs-button.toolbarbutton-1.chromeclass-toolbar-additional.tabs
 
 /*Auto hide nav bar*/
 #nav-bar:not([customizing="true"]) {
-  min-height: 0px !important;
-  max-height: 0px !important;
+  min-height: 1px !important;
+  max-height: 1px !important;
   margin-top: -37px !important;
   margin-right: 140px;
   padding-bottom: 5px;
@@ -84,16 +87,6 @@ toolbarbutton#alltabs-button.toolbarbutton-1.chromeclass-toolbar-additional.tabs
   transition: all 50ms linear 0s !important;
   z-index: -5 !important;
   box-shadow: none !important;
-}
-
-#navigator-toolbox {
-  opacity: 0.0;
-  transition: all 50ms linear 0s !important;
-}
-
-#navigator-toolbox:hover {
-  transition: all 50ms linear 0s !important;
-  opacity: 1.0;
 }
 
 #navigator-toolbox:hover :-moz-any(#nav-bar),
@@ -110,9 +103,15 @@ toolbarbutton#alltabs-button.toolbarbutton-1.chromeclass-toolbar-additional.tabs
   box-shadow: none !important;
 }
 
+hbox.titlebar-buttonbox-container {
+  opacity: 0.999; /* idk why this is needed */
+/*  min-height: 48px !important;
+  max-height: 48px !important;*/
+}
+
 /* Needed for for FF 75 megabar */
 #urlbar {
-  --urlbar-toolbar-height: 32px !important;
+  --urlbar-toolbar-height: 28px !important;
 }
 
 /* END auto hide nav bar*/
