@@ -2,7 +2,13 @@
 #context-pocket,
 #context-inspect-a11y,
 #context-take-screenshot,
-#context-sep-screenshots {
+#context-sep-screenshots,
+#context-savelinktopocket,
+#context-searchselect,
+#context-openlinkinusercontext-menu,
+#context-sep-sendlinktodevice,
+#context-openlinkprivate,
+#context-savelink {
   display: none;
 }
 
